@@ -1,0 +1,12 @@
+html结构
+  <!doctype html>  //声明文档类型
+<html>//根标签
+<head>//头部标签
+<title>
+</title>
+</head>
+
+<body>//主体标签
+
+</body>
+</html>
