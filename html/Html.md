@@ -30,7 +30,7 @@ html标签关系分类：
 sublime常用快捷键:
 	tab:补全标签代码
 	ctrl+shift+d:快速复制一行
-	ctrl+shift+k:快速复制一行
+	ctrl+shift+k:快速删除一行
 	ctrl+shift+s:另存为
 	ctrl+鼠标左键单击:多行选中
 	ctrl+h:查找替换
@@ -154,5 +154,59 @@ link标签:
 			<td></td>...<td></td>
 		</tr>
 		</table>
+
+表头与单元格合并
+	<table border="1" width="500"  height="300" align="center" >
+	<caption>表头</caption>    caption 表头
+	    <tr>
+	        <td colspan="2">张三</td>   colspan  同行的列合并   rowspan  同列的行合并
+	        <!-- <td>23</td> -->
+	        <td>前端工程师</td>
+	    </tr>
+	    <tr>
+	        <td></td>
+	        <td></td>
+	        <td rowspan="2"></td>
+	    </tr>
+	    <tr>
+	        <td></td>
+	        <td></td>
+	        <!-- <td></td> -->
+	    </tr>
+	</table>
+表格的标题、内容垂直对齐方式、边框颜色
+	表格的标题  <th></th>
+	<table border="2" width="500" height="300" bordercolor="red" cellpadding="0"> cellpadding 边框内文字与边框的距离
+    <tr >									   边框颜色
+        <th>姓名</th>                                         
+        <th>年龄</th>
+        <th>职位</th>
+    </tr>
+    <tr>
+        <td valign="bottom">张三</td>      valign 表格内字体所在边框的位置
+        <td>23</td>
+        <td>前端工程师</td>
+    </tr>
+    <tr>
+        <td>张三</td>
+        <td>23</td>
+        <td>前端工程师</td>
+    </tr>
+	</table>
+
+细线表格  实现思路：将table的背景变色  然后给每个td加上背景就可以得到
+
+表单提交 文本输入框、密码输入框、单选框
+	<form action="1.php"></form>  action用来处理信息
+
+	<form action="1.php" method="post">
+    用户名：<input type="text"  maxlength="6"(最大长度)  readonly="readonly"(只读) disabled="disabled"(未激活状态) name="username"(给这个输入框取个名字) value="默认值"(值，此值将传给处理文件)/><br/>
+    密码：<input type="password"/><br/>
+    <input type="submit"/>
+	</form>
+
+	文本输入框 <input type="text"  maxlength="6"(最大长度)  readonly="readonly"(只读) disabled="disabled"(未激活状态) name="username"(给这个输入框取个名字) value="默认值"(值，此值将传给处理文件)/>
+	密码输入框 <input type="password"/><br/>
+	
 	
 
