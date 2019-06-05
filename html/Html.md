@@ -2,6 +2,8 @@
 
 seo搜索引擎优化
 
+HTML  超文本标记语言    是一门结构化语言
+
 Html结构标准：
 	<!DOCTYPE html>//声明文档类型
 	<html>//根标签
@@ -207,6 +209,79 @@ link标签:
 
 	文本输入框 <input type="text"  maxlength="6"(最大长度)  readonly="readonly"(只读) disabled="disabled"(未激活状态) name="username"(给这个输入框取个名字) value="默认值"(值，此值将传给处理文件)/>
 	密码输入框 <input type="password"/><br/>
-	
-	
 
+	单选 <input type="radio" checked="checked" name="gender">男</input> 
+		 <input type="radio"  name="gender">女</input>
+		只有当name相同时才能实现单选功能
+
+下拉列表
+	    <select>
+        <option>呵呵呵</option>
+        <option>哈哈哈哈</option>
+        <option>得得得得</option>
+    </select>
+
+    <select  multiple="multiple">   //多选
+        <option>郑州市</option>
+        <option>商丘市</option>
+        <option selected="selected">洛阳市</option>  //selected 设置默认选中项
+    </select>
+	
+ 	分组显示
+	  <select  > 
+      <optgroup label="河南省">
+        <option>郑州市</option>
+        <option>商丘市</option>
+        <option >洛阳市</option>
+        </optgroup>
+           <optgroup label="北京市">
+        <option>朝阳区</option>
+        <option>大兴区</option>
+        <option >昌平区</option>
+        </optgroup>
+    </select>
+
+多选框、按钮、信息分组
+	<form action="1.php" method="get">
+	<!-- 表达信息分组 -->
+	    <fieldset>
+	        <legnd>表单头部信息</legend>
+	<input type="checkbox">打篮球</input>
+	<input type="checkbox">吃冰淇淋</input>
+	<input type="checkbox">唱歌</input>
+	<br>
+	<textarea cols="300" rows="20"></textarea><br>
+	
+	<!-- 上传文件 -->
+	<input type="file"></input><br>
+	
+	<!-- 可以提交信息 -->
+	<input type="image" src="swk.jpg"></input><br>
+	
+	<!-- 可以提交信息 -->
+	<input type="submit"></input><br>
+	
+	<!-- 普通按钮，不能提交信息 -->
+	<input type="button" value="普通按钮"></input><br>
+	
+	<!-- 重置按钮 -->
+	<input type="reset"></input>
+	    </fieldset>
+	</form>
+
+h5表单控件
+	<form action="1.php" method="post">
+    <!-- 网址标签 -->
+    <input type="url"></input><br>
+	<!-- 日期标签 -->
+	    <input type="date"></input><br>
+	<!-- 时间标签 -->
+	        <input type="time"></input><br>
+	<!-- 邮箱标签 -->
+	            <input type="email"></input><br>
+	
+	    <input type="submit"></input>
+	</form>
+
+标签语义化(seo优化 把样式去了之后整体感觉还是很不错  尽量少用无意义的标签  比如div与span)
+	
