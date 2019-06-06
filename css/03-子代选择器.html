@@ -2,8 +2,22 @@
 <html>
 <head>
     <title></title>
+    <style type="text/css">
+
+/*只有直接包含的元素才能使用这个样式*/
+        div>span{
+
+            color: orange;
+
+        }
+
+    </style>
 </head>
 <body>
+<div>
+    <p><span class="span">为了部落</span></p>
+</div>
 
+<div><span>为了联盟</span></div>
 </body>
 </html>

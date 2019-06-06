@@ -2,8 +2,37 @@
 <html>
 <head>
     <title></title>
+    <style type="text/css">
+/*所有地方符合的元素都可以使用*/
+          #title,  span,p{
+           color: red;
+       } 
+
+        /*交集选择器*/
+            h1#title{
+
+                 font-size: 25px;
+                 font-style: italic;
+                 font-family: 宋体;
+
+            }
+
+    </style>
 </head>
 <body>
+
+<div>
+<h1 id="title">标题万岁</h1>
+</div>
+
+<div>
+    <p><span>为了部落</span></p>
+</div>
+<p>为了联盟</p>
+
+<div>
+    <p>这是什么操作？</p>
+</div>
 
 </body>
 </html>
