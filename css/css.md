@@ -106,7 +106,7 @@
 		特点   独占一行  可以定义宽高  嵌套或者包含下，子块元素没有定义的情况下，默认宽度是父块宽度
 
 	2、行内元素 span  a   strong(文本加粗)   em(文字倾斜)   del(删除线)   ins下划线
-		特点    在一行上显示  定义宽高无效
+		特点    在一行上显示  定义宽高无效  可以定义左右的内外边距  上下的会被忽略掉
 
 	3、行内块元素(内联元素)  input  img
 		特点   在一行上显示  可以定义宽高
@@ -150,6 +150,7 @@
 	a:visited{属性:值;}   	链接访问之后的状态
 	a:hover{属性:值;}		鼠标放在连接上面的状态
 	a:active{属性:值;}		链接激活的状态	
+	注：如果四个一块使用，需要按顺序书写
 	 :focus{属性:值;}		获取焦点的状态
 
 	文本修饰：
@@ -168,6 +169,119 @@
 	background-attachment:scroll(这个是相对于你设置的盒子)|fixed(这个是相对于浏览器的)  是否滚动
 	
 	属性连写(示例)： background:red url("") 没有顺序要求  url为必写项
+
+行高定义(line-height)
+	浏览器默认文字大小：16px
+
+	行高是基线到基线之间的距离
+
+	行高=文字高度加上下边距
+	一行文字行高和父元素高度一致的时候文字可以垂直居中显示
+
+行高的单位  (下边都是以文字20px为基准)
+	<table>
+    <tr>
+        <td>单位</td>
+	    <td>文字大小</td>
+	    <td>值</td>
+	  
+    </tr>
+ <tr>
+        <td>px</td>
+	    <td>20px</td>
+	    <td>20px</td>
+    </tr>
+<tr>
+        <td>em</td>
+	    <td>20px</td>
+	    <td>40px</td>
+	  
+    </tr>
+<tr>
+        <td>%</td>
+	    <td>20px</td>
+	    <td>20px*百分比</td>
+	  
+    </tr>
+<tr>
+        <td>2</td>
+	    <td>20px</td>
+	    <td>40px*2</td>
+	  
+    </tr>
+</table>
+
+	总结:单位除像素以外，行高都是与文字大小乘积
+	
+	从父类继承行高，不带单位的行高是跟子元素文字大小相乘 其他的都是与父元素文字大小相乘
+
+盒子模型(三部分组成：边框、内边距、外边距)
+	1、边框 (以上边距为例)
+		border-top-style:none(无)|solid(实线)|dashed(虚线)|dotted(点线)	盒子样式
+		border-top-color:												边框颜色
+		border-top-width:												边框宽度
+	简写
+		border-top:red solid 5px										边框属性连写(style不能少)
+	四个边框值相同时
+		border:xx xx xx;												四个边框相同的写法(style不能少)
+	
+	2、边框合并 border-collapse:collapse
+
+	注：	border:0 none  去除边框，这样使用兼容性很好
+		outline-style:none  去除轮廓线(就是input点击的那个轮廓线)
+		<label for="要绑定的标签ID"></label>  友好性  label  for ID   获取光标焦点
+
+内边距
+	padding-left、padding-right、padding-top、padding-bottom
+	连写：	padding:20px;一个值的时候都是20   上右下左
+			padding:20px 30px;  上下20	左右30
+			padding:20px 30px 40px; 上20  左右30   下40
+			padding:20px 30px 40px 50px;  上右下左一一对应	 
+
+内边距影响盒子大小(跟Android很类似) 内边距会撑大盒子   border的宽度也会影响盒子的大小
+
+继承的盒子一般不会被撑大
+	包含(嵌套)的盒子，如果子盒子没有设置宽度，如果给子盒子设置左右内边距，如果内边距小于父盒子的宽度，就不会撑大盒子
+
+外边距  连写什么的与padding一模一样
+
+垂直方向外边距合并、外边距塌陷
+	外边距合并：外边距会用大的直接包括小的(只有垂直方向)
+		          .one{
+                width: 20px;
+                background: orange;
+                height: 20px;
+                margin-bottom: 20px;
+            }
+                  .two{
+                    background: #eee;
+                width: 20px;
+                height: 20px;
+          margin-top: 100px;
+            }
+
+	one和two的实际距离是100px；
+
+	外边距塌陷：
+		潜逃的盒子直接给子盒子设置垂直方向外边距的时候会发生外边距塌陷(父元素会被带下来)
+	解决方法：
+		1、给父盒子设置边框  				不推荐使用
+		2、给父盒子设置overflow:hidden;	推荐这个
+	
+fireworks的简单使用
+	ctrl+n  		新建文件
+	ctrl+o  		打开文件
+	ctrl+alt+r		调出和隐藏标尺
+	清除辅助线		
+	z 				放大镜
+	alt+鼠标左键		放大镜状态下缩小  
+	空格				抓手工具
+	拉出来两个辅助线->切换到光标工具->将光标放到辅助线之间->按住shift键测量出距离
+
+
+	
+	
+	
 	
 		
 	
