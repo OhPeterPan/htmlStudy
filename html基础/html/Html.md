@@ -178,7 +178,8 @@ link标签:
 	    </tr>
 	</table>
 表格的标题、内容垂直对齐方式、边框颜色
-	表格的标题  <th></th>
+	表格的标题  
+<th></th>
 	<table border="2" width="500" height="300" bordercolor="red" cellpadding="0"> cellpadding 边框内文字与边框的距离
     <tr >									   边框颜色
         <th>姓名</th>                                         
