@@ -434,4 +434,43 @@
 	1. 回到命令首部  ctrl+a
 	2. 去命令尾部    ctrl+e
 	3. mstsc:window远程桌面连接命令
+
+## Linux常用软件安装
+
+### git工具
+	1. 先git --version 查看git版本号
+	2. 如有 yum remove git
+	3. 下载 wget https://github.com/git/git/archive/v2.17.0.tar.gz
+	4. 解压 tar -zxvf  本地压缩包
+	5. 安装编译源码所需依赖 yum install curl-devel expat-devel gettext-devel openssl-devel zlib-devel gcc perl-ExtUtils-MakeMaker
+	6. 进入解压后的文件夹内部 cd git-2.17.0
+	7. 编译 make prefix=/usr/local/git all
+	8. 安装 make prefix=/usr/local/git install
+	9. 配置环境 vim /etc/profile 
+		PATH=$PATH:/usr/local/git/bin
+		(当有多个PATH的时候：export PATH=$PATH:<PATH 1>:<PATH 2>:<PATH 3>:------:<PATH N>路径之间使用:隔开)
+	
+		export PATH
+	10. 设置配置文件生效 source /etc/profile
+	11. 查看安装git版本号 git --version  
+	
+### java工具
+	1. 在/usr 目录下创建文件夹 mkdir java
+	2. 下载压缩文件
+		wget --no-cookies --no-check-certificate --header "Cookie: gpw_e24=http%3A%2F%2Fwww.oracle.com%2F; oraclelicense=accept-securebackup-cookie" "http://download.oracle.com/otn-pub/java/jdk/8u141-b15/336fa29ff2bb4ef291e347e091f7f4a7/jdk-8u141-linux-x64.tar.gz"
+
+	3. 解压 tar -zxvf xxx.tar.gz
+	4. 配置环境 vim /etc/profile 
+		JAVA_HOME=/usr/java/jdk1.8.0_191
+		PATH=$PATH:$JAVA_HOME/bin
+		CLASSPATH=.:$JAVA_HOME/lib/dt.jar:$JAVA_HOME/lib/tools.jar
+		export JAVA_HOME
+		export PATH
+		export CLASSPATH
+
+	5. 设置配置文件生效 source /etc/profile
+	6. 查看版本号 java -version
+
+### php安装与卸载
+
 	
