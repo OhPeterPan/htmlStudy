@@ -472,5 +472,19 @@
 	6. 查看版本号 java -version
 
 ### php安装与卸载
+	1. php下查看扩展
+		php -m [| findstr 扩展名 可以查看某个扩展是否打开]
+
+	ps：php需要的扩展：
+		1. extension=php_openssl.dll
+		2. extension=php_pdo_mysql.dll
+		3. extension=php_mbstring.dll
+		4. extension=php_fileinfo.dll
+		5. extension=php_curl.dll
+		6. extension=php_gd2.dll
+		7. extension=php_soap.dll
+		8. extension=php_mysqli.dll
+		9. extension=php_sockets.dll
+		
 
 	
